@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: blog-register
+#  profiles:
+#    active: native
+
+eureka:
+#  instance:
+#    non-secure-port: ${server.port:8888} #3
+#    metadata-map:
+#      instanceId: ${spring.application.name}:${random.value} #4
+  client:
+    service-url:
+      defaultZone: http://${eureka.host:localhost}:${eureka.port:8761}/eureka/ #5
